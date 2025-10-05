@@ -1,20 +1,23 @@
 ﻿using AM.ApplicationCore.Domain;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AM.ApplicationCore.Interfaces
 {
     public interface IFlightMethods
     {
+        // Méthodes classiques
         List<DateTime> GetFLightDates(string destination);
         void GetFlights(string filterType, string filterValue);
-        public void GetFlightDetails(Plane p);
+        void GetFlightDetails(Plane p);
         int GetFlightsNumber(DateTime startDate);
+        double DurationAverage(string destination);
+        IEnumerable<Flight> OrderedFlights();
+        IEnumerable<Passenger> SeniorTravellers(Flight flight);
+        IEnumerable<IGrouping<string, Flight>> GroupeDEstination();
 
-
-
+        // Délégués
+        Action<Plane> FlightDetailsDel { get; set; }
+        Func<string, double> DurationAverageDel { get; set; }
     }
 }

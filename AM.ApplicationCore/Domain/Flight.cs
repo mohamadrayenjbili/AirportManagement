@@ -9,21 +9,18 @@ namespace AM.ApplicationCore.Domain
 {
     public class Flight
     {
-        public string FlightID { get; set; }
+        public required string FlightID { get; set; } = string.Empty;
 
-        public string Destination { get; set; }
-        public string departure { get; set; }    
+        public string Destination { get; set; } = string.Empty;
+        public string departure { get; set; } = string.Empty;
         public DateTime FlightDate { get; set; }
 
-        public string EffectiveArrival { get; set; }
+        public string EffectiveArrival { get; set; } = string.Empty;
 
-        public int EstimatedDuration { get;set; }
+        public int EstimatedDuration { get; set; }
 
         public int PlaneId { get; set; }
-        public Plane plane { get; set; }
+        public Plane plane { get; set; } = new Plane();
         public ICollection<Passenger> Passengers { get; set; } = new List<Passenger>();
-
-
-          
     }
 }
