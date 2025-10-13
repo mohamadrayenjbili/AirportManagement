@@ -1,5 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using AM.ApplicationCore.Domain;
+using AM.ApplicationCore.Services;
+using Am.Infrastructure;
+using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography;
+
+// Apply pending EF Core migrations and create the database if it does not exist
+using (AMContext context = new AMContext())
+{
+    context.Database.Migrate();
+}
 
 // --- Partie déjà existante (ne rien changer) ---
 Plane plane = new Plane();
@@ -31,3 +41,8 @@ staff.PassengerType();
 
 Console.WriteLine("\n-- Appel de PassengerType pour traveller--");
 traveller.PassengerType();
+
+passenger.FirstName = "mohamad";
+passenger.LastName = "jbili";
+passenger.UpperFullName();
+Console.WriteLine(passenger.FirstName+ " "+ passenger.LastName);

@@ -30,4 +30,5 @@ C:\Users\jbili\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net8.
 C:\Users\jbili\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net8.0\refint\AM.ApplicationCore.dll
 C:\Users\jbili\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net8.0\AM.ApplicationCore.pdb
 C:\Users\jbili\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net8.0\ref\AM.ApplicationCore.dll
-C:\Users\jbili\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\jbili\source\repos\AirportManagement\AM.ApplicationCore\bin\Debug\net8.0\AM.ApplicationCore.runtimeconfig.json
+C:\Users\jbili\source\repos\AirportManagement\AM.ApplicationCore\obj\Debug\net8.0\AM.ApplicationCore.genruntimeconfig.cache

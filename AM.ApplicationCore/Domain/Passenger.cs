@@ -23,30 +23,35 @@ namespace AM.ApplicationCore.Domain
         {
             return "FirstName" + FirstName + "LastName" + LastName;
         }
-        //question 1)a)
-        public bool CheckProfile(string Nom, string Prenom)
-        {
-        return (FirstName.Equals(Prenom, StringComparison.OrdinalIgnoreCase)
-            && LastName.Equals(Nom, StringComparison.OrdinalIgnoreCase));
-        }
-        //question 1)b)
+        ////question 1)a)
+        //public bool CheckProfile(string Nom, string Prenom)
+        //{
+        //return (FirstName.Equals(Prenom, StringComparison.OrdinalIgnoreCase)
+        //    && LastName.Equals(Nom, StringComparison.OrdinalIgnoreCase));
+        //}
+        ////question 1)b)
 
-        public bool CheckProfile(string Nom, string Prenom, string email)
-        {
-            return FirstName.Equals(Prenom, StringComparison.OrdinalIgnoreCase)
-                && LastName.Equals(Nom, StringComparison.OrdinalIgnoreCase)
-                && EmailAddress.Equals(email, StringComparison.OrdinalIgnoreCase);
-        }
+        //public bool CheckProfile(string Nom, string Prenom, string email)
+        //{
+        //    return FirstName.Equals(Prenom, StringComparison.OrdinalIgnoreCase)
+        //        && LastName.Equals(Nom, StringComparison.OrdinalIgnoreCase)
+        //        && EmailAddress.Equals(email, StringComparison.OrdinalIgnoreCase);
+        //}
 
 
-        Question 1)c)
+        //Question 1)c)
 
         public bool CheckProfile(string Nom, string Prenom, string email = null)
         {
             if (email == null)
-                return CheckProfile(Nom, Prenom); // Appel de la 1ère méthode
+                return (FirstName.Equals(Prenom, StringComparison.OrdinalIgnoreCase)
+        && LastName.Equals(Nom, StringComparison.OrdinalIgnoreCase));
+            //return CheckProfile(Nom, Prenom); // Appel de la 1ère méthode
             else
-                return CheckProfile(Nom, Prenom, email); // Appel de la 2ème méthode
+                return FirstName.Equals(Prenom, StringComparison.OrdinalIgnoreCase)
+           && LastName.Equals(Nom, StringComparison.OrdinalIgnoreCase)
+           && EmailAddress.Equals(email, StringComparison.OrdinalIgnoreCase);
+           // return CheckProfile(Nom, Prenom, email); // Appel de la 2ème méthode
         }
         //question 2)a)
         public virtual void PassengerType()
